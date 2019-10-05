@@ -21,12 +21,15 @@ module load singularity/3.1.0
 
 
 ####### ==> Database scripts directory
+
 export MDB_SCRIPTS_DIR=
 
 
 ####### ==> Database configuration
 
 ## DB root directory
+## !!! IF WORKING WITH SENSITIVE DATA, POINT TO A DESIGNATED DIRECTORY !!!
+## !!! CONSULT WITH THE SIGNEE OF THE DUA/DMP !!!
 export MDB_ROOT_DIR=
 
 ## DB configuration directory
@@ -58,6 +61,3 @@ export MY_SINGULARITY_DB_INSTANCE_NAME=
 
 ## Credentials file for spark jdbc
 export MDB_SPARK_CREDENTIALS_FILE=
-
-
-
