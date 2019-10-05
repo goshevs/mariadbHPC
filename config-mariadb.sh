@@ -23,15 +23,17 @@ export SINGULARITY_BIND="$MDB_ROOT_DIR/lib:/var/lib/mysql,$MDB_ROOT_DIR/run:/run
 
 ## Write out the db hostname
 dbNodeName=$(cat $PBS_NODEFILE | uniq)
-echo "$dbNodeName" > $MDB_CONF_DIR/dbNode
+echo "$dbNodeName:$MDB_PORT" > $MDB_CONF_DIR/dbNode
 if [[ ! -z "$MDB_NODE_DIR_SHARED" ]]; then
-	echo "$dbNodeName" > $MDB_NODE_DIR_SHARED/dbNode
+	echo "$dbNodeName:$MDB_PORT" > $MDB_NODE_DIR_SHARED/dbNode
 fi
 
 ## Write out the pid
 echo "$PBS_JOBID" > $MDB_CONF_DIR/jobid
 
 ## Create properties file for db-spark integration
-echo "user root" > $MDB_SPARK_CREDENTIALS_FILE
-echo "password $MDB_ROOT_PASS" >> $MDB_SPARK_CREDENTIALS_FILE
-chmod 600 $MDB_SPARK_CREDENTIALS_FILE
+if [[ ! -z "$MDB_SPARK_CREDENTIALS_FILE" ]]; then
+	echo "user root" > $MDB_SPARK_CREDENTIALS_FILE
+	echo "password $MDB_ROOT_PASS" >> $MDB_SPARK_CREDENTIALS_FILE
+	chmod 600 $MDB_SPARK_CREDENTIALS_FILE
+fi

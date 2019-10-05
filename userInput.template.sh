@@ -35,10 +35,10 @@ export MDB_ROOT_DIR=
 ## DB configuration directory
 export MDB_CONF_DIR=
 
-## DB port (option available to root only!)
+## DB port (only root can use different port!)
 export MDB_PORT=3306
 
-## File to post db node information (for multiple db users)
+## OPTIONAL: File to post db node information (for multiple db users)
 export MDB_NODE_DIR_SHARED=
 
 ## Database name
@@ -59,5 +59,5 @@ export MY_SINGULARITY_DB_INSTANCE_NAME=
 
 ####### ==> Spark integration 
 
-## Credentials file for spark jdbc
+## OPTIONAL: Credentials file for spark jdbc
 export MDB_SPARK_CREDENTIALS_FILE=
