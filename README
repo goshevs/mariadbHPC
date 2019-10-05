@@ -1,4 +1,4 @@
-# Scripts for running containerized MariaDB on HPC infrastructure
+# Scripts for running containerized instances of MariaDB on HPC infrastructure
 
 ## Introduction
 
@@ -45,9 +45,11 @@ users know what they are doing, they should not edit any of them.**
 ## Configuration directory
 
 We keep:
-`mariadb.conf`
-`mariadb.credentials` layout
-`spark.jdbc.credentials` layout
+`mariadb.cnf` TODO
+`mariadb.credentials` TODO 
+`spark.jdbc.credentials` TODO
 
 ## Interaction with Apache Spark
+
+TODO
 
