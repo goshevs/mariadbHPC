@@ -26,7 +26,7 @@ source $MDB_SCRIPTS_DIR/start-mariadb.sh
 ## Retrieve the walltime of the job
 jobNumber =$(echo $PBS_JOBID | grep -Eo '[0-9]+')
 jobTimeRemaining=$(qstat -f $jobNumber | grep Walltime.Remaining | grep -Eo '[0-9]+')
-runTime=$(expr $(echo $JB | grep -Eo '[0-9]+') - 300)
+runTime=$(expr $jobTimeRemaining - 300)
 
 ## Keep the job running for runTime seconds
 sleep $runTime

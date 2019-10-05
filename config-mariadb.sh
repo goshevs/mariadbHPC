@@ -9,9 +9,6 @@
 ## Oct 04, 2019
  
 
-## Load the user specifications 
-source ./userInput.sh
-
 ## Define the environment variables required by the MariaDB container
 MDB_ROOT_PASS=`head -n 2 $MDB_CREDENTIALS_FILE | tail -n 1`
 MDB_USER=`head -n 3 $MDB_CREDENTIALS_FILE | tail -n 1`
