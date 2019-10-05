@@ -57,7 +57,7 @@ and flush against the left margin.
 ## Configuration directory
 
 `$MDB_CONF_DIR` is mapped to `/etc/mysql/conf.d` in the mariadb container. This 
-enables the users to configure the database server by placing a `mariadb.cnf` 
+enables users to configure the database server by placing a `mariadb.cnf` 
 in the configuration directory.
 
 
@@ -69,6 +69,6 @@ Users can integrate Apache Spark with a containerized MariaDB instance using:
 `$MDB_SPARK_CREDENTIALS_FILE`. 
 
 2. The name of the node and port on which the database instance is running 
-located in file `dbNode` in `$MDB_CONF_DIR`.
+which are located in file `dbNode` in `$MDB_CONF_DIR`.
 
 
