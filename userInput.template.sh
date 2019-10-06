@@ -22,6 +22,7 @@ module load singularity/3.1.0
 
 ####### ==> Database scripts directory
 
+## DB setup scripts directory
 export MDB_SCRIPTS_DIR=
 
 
