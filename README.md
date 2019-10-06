@@ -3,9 +3,9 @@
 
 ## Introduction
 
-This repo offers a set of barebones scripts whose goal is to simplify
-running containerized instances of MariaDB on HPC infrastructure with PBS 
-as a job scheduler. 
+This repo offers a set of barebones scripts that simplify
+running containerized instances of MariaDB on HPC infrastructure with a PBS 
+job scheduler. 
 
 
 ## How to use
@@ -70,5 +70,3 @@ Users can integrate Apache Spark with a containerized MariaDB instance using:
 
 2. The name of the node and port on which the database instance is running 
 which are saved in file `dbNode` in `$MDB_CONF_DIR`.
-
-
