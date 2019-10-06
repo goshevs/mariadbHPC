@@ -24,7 +24,7 @@ echo "Starting the db instance"
 source $MDB_SCRIPTS_DIR/start-mariadb.sh
 
 ## Retrieve the walltime of the job
-jobNumber =$(echo $PBS_JOBID | grep -Eo '[0-9]+')
+jobNumber=$(echo $PBS_JOBID | grep -Eo '[0-9]+')
 jobTimeRemaining=$(qstat -f $jobNumber | grep Walltime.Remaining | grep -Eo '[0-9]+')
 runTime=$(expr $jobTimeRemaining - 300)
 
@@ -33,3 +33,4 @@ sleep $runTime
 
 echo "Shutting down the db instance"
 source $MDB_SCRIPTS_DIR/stop-mariadb.sh
+

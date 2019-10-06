@@ -65,10 +65,10 @@ in the configuration directory.
 
 Users can integrate Apache Spark with a containerized MariaDB instance using:
 
-1. The db instance root username and password located in 
+1. The db instance root username and password saved in 
 `$MDB_SPARK_CREDENTIALS_FILE`. 
 
 2. The name of the node and port on which the database instance is running 
-which are located in file `dbNode` in `$MDB_CONF_DIR`.
+which are saved in file `dbNode` in `$MDB_CONF_DIR`.
 
 

@@ -10,7 +10,5 @@
 
 
 singularity instance stop $MY_SINGULARITY_DB_INSTANCE_NAME
-
-## To stop all instances:
-## singularity instance stop -a -F
-
+echo
+echo "Container $MY_SINGULARITY_DB_INSTANCE_NAME stopped and removed."

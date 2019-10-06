@@ -35,7 +35,7 @@ export MDB_ROOT_DIR=
 ## DB configuration directory
 export MDB_CONF_DIR=
 
-## DB port (only root can use different port!)
+## DB port (only root can use a different port!)
 export MDB_PORT=3306
 
 ## OPTIONAL: File to post db node information (for multiple db users)

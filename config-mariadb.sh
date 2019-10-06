@@ -31,6 +31,9 @@ fi
 ## Write out the pid
 echo "$PBS_JOBID" > $MDB_CONF_DIR/jobid
 
+## Write out the container id
+echo "$MY_SINGULARITY_DB_INSTANCE_NAME" > $MDB_CONF_DIR/containerID
+
 ## Create properties file for db-spark integration
 if [[ ! -z "$MDB_SPARK_CREDENTIALS_FILE" ]]; then
 	echo "user root" > $MDB_SPARK_CREDENTIALS_FILE
