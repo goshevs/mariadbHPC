@@ -11,7 +11,7 @@
 initFlag=$1
 
 echo "Setting up environment and defaults"
-source ./userInput.sh
+source ./userConfiguration.sh
 source $MDB_SCRIPTS_DIR/config-mariadb.sh
 
 ## Initialize a new db if needed
