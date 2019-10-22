@@ -6,7 +6,7 @@
 ##
 ##
 ## Simo Goshev
-## Oct 04, 2019
+## Oct 22, 2019
  
 
 #########################################################
@@ -20,7 +20,7 @@ module load singularity/3.1.0
 ## Configuration variables
 
 
-####### ==> Project directory
+####### ==> OPTIONAL: Project directory
 export PROJECT_ROOT_DIR=
 
 ####### ==> Database scripts directory
@@ -48,7 +48,7 @@ export MDB_NODE_DIR_SHARED=
 ## Database name
 export MDB_DATABASE_NAME=
 
-## DB credentials file
+## DB credentials file (MUST EXIST ALREADY)
 export MDB_CREDENTIALS_FILE=
 
 
@@ -61,7 +61,7 @@ export MDB_IMAGE=
 export MY_SINGULARITY_DB_INSTANCE_NAME=
 
 
-####### ==> Spark integration 
+####### ==> Spark integration (OPTIONAL)
 
 ## Root credentials file for spark jdbc
 export MDB_SPARK_ROOT_CREDENTIALS_FILE=

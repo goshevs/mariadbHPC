@@ -8,14 +8,37 @@
 ## Simo Goshev
 ## Oct 04, 2019
 
-initFlag=$1
+
+## Collect arguments
+while getopts ":d" opt; do
+        case ${opt} in
+                d ) initFlag=1
+                ;;
+                \? ) echo "USAGE: mariadbSpider.sh [-d]"
+                     exit 1
+                ;;
+                : ) echo "Invalid option $OPTARG"
+                    exit 1
+                ;;
+        esac
+done
+shift $((OPTIND -1))
+
 
 echo "Setting up environment and defaults"
 source ./userConfiguration.sh
+
+## Check credentials
+if [[ ! -f "$MDB_CREDENTIALS_FILE" ]]; then
+        echo "ERROR: Credentials file not provided."
+        exit 1
+fi
+
+## Configure 
 source $MDB_SCRIPTS_DIR/config-mariadb.sh
 
 ## Initialize a new db if needed
-if [[ "$initFlag" = "init" ]]; then
+if [[ ! -z "$initFlag" ]]; then
 	echo "Initializing a new database"
 	yes 2>/dev/null | $MDB_SCRIPTS_DIR/init-mariadb.sh
 fi

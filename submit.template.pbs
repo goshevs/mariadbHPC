@@ -5,12 +5,12 @@
 #PBS -S /bin/bash
 #PBS -o <path to a directory & file; SEE BELOW IF WORKING WITH SENSITIVE DATA>
 #PBS -e <path to a directory & file; SEE BELOW IF WORKING WITH SENSITIVE DATA>
-#PBS -d <add here the path to your mariadb scripts>
+#PBS -d <path to mariadb scripts>
 
-## If you are initializing a brand new database, run
-## ./mariadb.sh init
+## If initializing a brand new database
+## ./mariadb.sh -d
 
-## If you are restarting an existing database, run
+## If restarting an existing database
 ## ./mariadb.sh
 
 
