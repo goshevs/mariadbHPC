@@ -45,7 +45,7 @@ All remaning files configure, start and stop the database instance.
 **Unless users know what they are doing, they should not edit them.**
 
 
-## Mariadb credentials file
+## MariaDB credentials file
 
 Users must provide a database credentials file, `$MDB_CREDENTIALS_FILE`, in 
 `userConfiguration.sh`. This file must include the root username (i.e. `root`) and password, 
