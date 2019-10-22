@@ -15,7 +15,7 @@ Download/clone the repo to a directory and edit the `userConfiguration.template.
 Save `userConfiguration.template.sh` as `userConfiguration.sh` and (if desired save `submit.template.pbs` as 
 `submit.pbs`). Then submit the PBS script to the job scheduler on the cluster.
 
-Please note that in the case of working with sensitive data, users **MUST** ensure 
+Please note that in the case of working with sensitive data, users **must** ensure 
 that all writes to disk by the database instance are directed to a directory 
 permissible under the DUA/DMP. If users are unsure what directories they can 
 write to, they should contact the signee of the DUA/DMP.
@@ -28,14 +28,14 @@ The scripts in this repo and their descriptions follow below.
 ### `userConfiguration.template.sh`
 
 `userConfiguration.template.sh` defines a set of environment variables needed for configuring
-the database instance. This files **MUST** be customized and saved by the users as 
-`userConfiguration.sh`. If working with sensitive data, users **MUST** ensure that all 
+the database instance. This files **must** be customized and saved by the users as 
+`userConfiguration.sh`. If working with sensitive data, users **must** ensure that all 
 files written out by the database instance are stored in a permissible directory. 
 
 ### `submit.template.pbs`
 
-This is the PBS submission script template. Users **MUST** customize it following
-the instructions provided in it. Users **MUST** pay specific attention to the 
+This is the PBS submission script template. Users **must** customize it following
+the instructions provided in it. Users **must** pay specific attention to the 
 instructions for working with sensitive data, if this applies to them.
 
 ### All other files
@@ -66,11 +66,11 @@ in the configuration directory.
 Users have the option to integrate Apache Spark with a containerized
 distiributed MariaDB instance using:
 
-1. The db instance username and password provided in 
+1. The db instance username and password written out to 
 `$MDB_SPARK_ROOT_CREDENTIALS_FILE` and/or `$MDB_SPARK_USER_CREDENTIALS_FILE`.
 
 2. The name of the node and port on which the db instance is 
-running, provided in file `dbNode` in `$MDB_CONF_DIR`.
+running, written out to file `dbNode` in `$MDB_CONF_DIR`.
 
-3. The name of the database `MDB_DATABASE_NAME`, provided in file `dbName` in 
+3. The name of the database `$MDB_DATABASE_NAME`, written out to file `dbName` in 
  `$MDB_CONF_DIR`.
