@@ -40,7 +40,7 @@ instructions for working with sensitive data, if this applies to them.
 
 ### All other files
 
-All remaning files configure, start and stop the database instance. 
+All remaining files configure, start and stop the database instance. 
 
 **Unless users know what they are doing, they should not edit them.**
 
@@ -50,7 +50,7 @@ All remaning files configure, start and stop the database instance.
 Users must provide a database credentials file, `$MDB_CREDENTIALS_FILE`, in 
 `userConfiguration.sh`. This file must include the root username (i.e. `root`) and password, 
 and a db user username and password. All four pieces of information have to be
-provided in this order, on seperate consecutive lines starting from the first line, 
+provided in this order, on separate consecutive lines starting from the first line, 
 and flush against the left margin.
 
 
@@ -64,7 +64,7 @@ in the configuration directory.
 ## Integration with Apache Spark
 
 Users have the option to integrate Apache Spark with a containerized
-distiributed MariaDB instance using:
+distributed MariaDB instance using:
 
 1. The db instance username and password written out to 
 `$MDB_SPARK_ROOT_CREDENTIALS_FILE` and/or `$MDB_SPARK_USER_CREDENTIALS_FILE`.
